@@ -1,8 +1,8 @@
-$primaryColor: #fafafaa2;
+$primaryColor: #759FBC;
 $accentColor: #c0c6ccaf;
 $primaryText: #212121;
 $secondaryText: rgb(255, 255, 255);
-$button: #be02fd;
+$button: #1F5673;
 
 * {
     margin: 0;
@@ -11,6 +11,7 @@ $button: #be02fd;
 
 .background {
     background-color: $primaryColor;
+    padding-top: 50px;
 }
 
 h1, h2 {
@@ -44,7 +45,6 @@ h1, h2 {
 .button {
     background-color: $button;
     color: $secondaryText;
-    font-size: large;
     font-weight: bold;
     width: 100px;
     margin: auto;

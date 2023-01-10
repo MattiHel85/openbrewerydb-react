@@ -35,11 +35,9 @@ function App () {
     fetchBreweries()
   }, [])
 
-  console.log(breweries)
-
   return (
     <div className="background">
-      <h1>Open Brewery DB Breweries</h1>
+      <h1>OPEN BREWERY DB SPA</h1>
         <div className="container">
           {breweries.map((brewery) => (
               <BreweryCard 
