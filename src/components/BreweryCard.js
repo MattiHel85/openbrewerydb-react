@@ -1,20 +1,27 @@
 import React from 'react'
+import Button from './Button'
+import "../App.scss"
 
 function BreweryCard(props) {
   return (
-    <li className="brewery" key={props.id}>
-      <h3>
-        {props.name}
-      </h3>
-      <ul>
-        <li>
-          {props.city}
-        </li>
-        <li>
-          {props.state}
-        </li>
-      </ul>
-    </li>
+    <div className="brewery" key={props.id}>
+        <div>
+          <h2>
+            {props.name}
+          </h2>    
+          <p>
+            {props.city}
+          </p>
+          <p>
+            {props.state}
+          </p>
+        </div>
+        
+        
+        <Button />       
+      
+    
+    </div>
       
   )
 }

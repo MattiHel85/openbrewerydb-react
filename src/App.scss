@@ -1,0 +1,54 @@
+$primaryColor: #fafafaa2;
+$accentColor: #c0c6ccaf;
+$primaryText: #212121;
+$secondaryText: rgb(255, 255, 255);
+$button: #be02fd;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-color: $primaryColor;
+}
+
+h1, h2 {
+    color: $primaryText;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.brewery {
+    display: grid;
+    margin: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 300px;
+    width: 300px;
+    background-color: $accentColor;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.button {
+    background-color: $button;
+    color: $secondaryText;
+    font-size: large;
+    font-weight: bold;
+    width: 100px;
+    margin: auto;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-align: center;
+}

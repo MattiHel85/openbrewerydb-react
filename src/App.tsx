@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BreweryCard from "./components/BreweryCard";
+import './App.scss'
 
 export type Brewery = {
   id: string
@@ -37,19 +38,19 @@ function App () {
   console.log(breweries)
 
   return (
-    <div>
-      <h1>BREWERIES</h1>
-      <ul>
-        {breweries.map((brewery) => (
-            <BreweryCard 
-              key={brewery.id} 
-              id={brewery.id} 
-              name={brewery.name}
-              city={brewery.city}
-              state={brewery.state}
-             />
-        ))}
-      </ul>
+    <div className="background">
+      <h1>Open Brewery DB Breweries</h1>
+        <div className="container">
+          {breweries.map((brewery) => (
+              <BreweryCard 
+                key={brewery.id} 
+                id={brewery.id} 
+                name={brewery.name}
+                city={brewery.city}
+                state={brewery.state}
+               />
+          ))}
+        </div>
     </div>
   );
 }
