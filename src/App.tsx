@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useParams,
+ } from "react-router-dom";
 import BreweryCard from "./components/BreweryCard";
+import BreweryInfo from "./components/BreweryInfo";
 import './App.scss'
 
 export type Brewery = {
@@ -37,18 +44,23 @@ function App () {
 
   return (
     <div className="background">
-      <h1>OPEN BREWERY DB SPA</h1>
-        <div className="container">
-          {breweries.map((brewery) => (
-              <BreweryCard 
-                key={brewery.id} 
-                id={brewery.id} 
-                name={brewery.name}
-                city={brewery.city}
-                state={brewery.state}
-               />
-          ))}
-        </div>
+      <h1>OPEN BREWERY DB SPA 15.1.23</h1>
+      <div className="container">
+        <Router>
+          <Routes>
+              <Route path="/" element={ breweries.map((brewery) => (
+                 <BreweryCard 
+                   key={brewery.id} 
+                   id={brewery.id} 
+                   name={brewery.name}
+                   city={brewery.city}
+                   state={brewery.state}
+                 />))}
+                 />
+                 <Route path="/:id" element={<BreweryInfo />}/>
+          </Routes>
+        </Router>
+      </div>      
     </div>
   );
 }
