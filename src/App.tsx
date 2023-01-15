@@ -6,6 +6,7 @@ import {
  } from "react-router-dom";
 import BreweryCard from "./components/BreweryCard";
 import BreweryInfo from "./components/BreweryInfo";
+import Home from "./components/Home";
 import './App.scss'
 
 export type Brewery = {
@@ -48,7 +49,8 @@ function App () {
       <div className="container">
         <Router>
           <Routes>
-              <Route path="/" element={ breweries.map((brewery) => (
+              <Route path="/" element={<Home />}/>
+              <Route path="/breweries" element={ breweries.map((brewery) => (
                  <BreweryCard 
                    key={brewery.id} 
                    id={brewery.id} 
@@ -57,7 +59,7 @@ function App () {
                    state={brewery.state}
                  />))}
                  />
-                 <Route path="/:id" element={<BreweryInfo />}/>
+                 <Route path="/brewery/:id" element={<BreweryInfo />}/>
           </Routes>
         </Router>
       </div>      
