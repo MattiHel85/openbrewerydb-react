@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useParams,
  } from "react-router-dom";
 import BreweryCard from "./components/BreweryCard";
 import BreweryInfo from "./components/BreweryInfo";
