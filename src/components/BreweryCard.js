@@ -1,14 +1,23 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Button from './Button'
 import "../App.scss"
 
-function BreweryCard(props) {
+export default function BreweryCard(props) {
+  // const navigate = useNavigate();
+
+  // handleOnClick = () => {
+  //   navigate("/1")
+  // }
   return (
+    
     <div className="brewery" key={props.id}>
         <div>
           <h2>
             {props.name}
-          </h2>    
+            
+          </h2>  
+          <p>{props.key}</p>  
           <p>
             {props.city}
           </p>
@@ -18,7 +27,7 @@ function BreweryCard(props) {
         </div>
         
         
-        <Button />       
+        <Button onClick={() => console.log('click')}/>       
       
     
     </div>
@@ -26,4 +35,4 @@ function BreweryCard(props) {
   )
 }
 
-export default BreweryCard
+// export default BreweryCard

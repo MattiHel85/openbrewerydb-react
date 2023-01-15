@@ -42,9 +42,10 @@ function App () {
     fetchBreweries()
   }, [])
 
+ 
   return (
     <div className="background">
-      <h1>OPEN BREWERY DB SPA 15.1.23</h1>
+      <h1>OPEN BREWERY DB SPA</h1>
       <div className="container">
         <Router>
           <Routes>
